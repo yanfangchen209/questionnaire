@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>questionnaire here</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Customer Questionnaire</h1>
+	<div>
+		<p>Your Feedback, Our Fuel. We appreciate your participation in
+			our industry. Please take the survey & leave a remark below to help
+			with future improvement</p>
+	</div>
+
+	<form action="questionnaire" method="post">
+		<div>
+			<label for="firstname">First name</label> 
+			<input type="text"id="firstname" name="firstName"> 
+			<label for="lastname">Last name</label> 
+			<input type="text" id="lastname" name="lastName">
+		</div>
+		<div>
+			<span>Gender</span> 
+<!-- 			<input type="radio" id="female" name="gender" value="female">  -->
+			<input type="radio" id="female" name="gender"> 
+			<label for="female">Female</label> 
+			<input type="radio" id="male" name="gender">
+			<label for="male">Male</label>
+			
+			<label for="age">Age</lable>
+			<input type="text" id="age" name="age" style="width:30px">
+		</div>
+		
+		<div>
+			<label for="phone">Phone</label>
+			<input type="text" id="phone" name="phone">
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email">
+		</div>
+			
+		<div>
+		    <span>Address</span><br>
+		    <label for="street">Street</label>
+		    <input type="text" id="street" name="street" style="width:300px">
+		    <label for="city">City</label>
+		    <input type="text" id="city" name="city" style="width:300px"><br>
+		    
+<!-- 		    <label for="state">State</label>  -->
+<!-- 		    <select id="state" name="state"> -->
+		    		    
+		    <span>State</span> 
+		    <select>
+<!-- 		        <option value="oklahoma">Oklahoma</option> -->
+		    	<option>Oklahoma</option>
+		    	<option>Texas</option>
+		    	<option>Colorado</option>
+		    	<option>Ohio</option>
+		    	<option>New York</option>
+		    </select>
+		    
+		    <label for="zip">ZIP</label>
+			<input type="text" id="zip" name="zip" style="width:145px">
+	     </div>
+	     
+	     <div>
+	     	<span>Hobby</span><br>
+<!-- 	     	<input type="checkbox" id="hobby1" name="hobby1"> -->
+	     	<input type="checkbox" id="hobby1" name="hobby1" value="Swimming">
+	     	<label for="hobby1">Swimming</label><br>
+	     	<input type="checkbox" id="hobby2" name="hobby2" value="Running">
+	     	<label for="hobby2">Running</label><br>
+	     	<input type="checkbox" id="hobby3" name="hobby3" value="Skiing">
+	     	<label for="hobby3">Skiing</label><br>
+	     	<input type="checkbox" id="hobby4" name="hobby4" value="Dancing">
+	     	<label for="hobby4">Dancing</label><br>
+	     	<input type="checkbox" id="hobby5" name="hobby4" value="Yoga">
+	     	<label for="hobby5">Yoga</label><br>
+	        <input type="checkbox" id="hobby5" name="hobby5" value="Playning an instrument">
+	     	<label for="hobby5">Playing an instrument</label><br>
+	     	
+	     	<input type="submit" value="Submit">
+	     	
+	     	<input type="button" name="test" value="OK">
+	     	
+	     	
+	 
+	     		
+	     		
+	     		
+	     	</select>
+	     	
+	     	
+	     	
+
+		
+		
+</body>
+</html>
