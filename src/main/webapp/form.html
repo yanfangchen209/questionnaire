@@ -8,64 +8,60 @@
 <body>
 	<h1>Customer Questionnaire</h1>
 	<div>
-		<p>Your Feedback, Our Fuel. We appreciate your participation in
-			our industry. Please take the survey & leave a remark below to help
-			with future improvement</p>
+		<p>Your Feedback is our Fuel. We appreciate your participation in our industry. Please take the survey and leave a remark below to help
+			with future improvement.
+		</p>
 	</div>
-
-	<form action="questionnaire" method="post">
+	<form action="question" method="post" onSubmit="return userInputValidation();">
 		<div>
-			<label for="firstname">First name</label> 
-			<input type="text"id="firstname" name="firstName"> 
-			<label for="lastname">Last name</label> 
-			<input type="text" id="lastname" name="lastName">
+			<label for="firstName">First name</label> 
+			<input type="text" id="firstName" name="firstName" onChange="validateUsername('firstName')"/>
+			<span id="firstNameError" style="color: red;"></span>
+		</div>
+		<div>
+			<label for="lastName">Last name</label> 
+			<input type="text" id="lastName" name="lastName" onChange="validateUsername('lastName')"/>
+			<span id="lastNameError" style="color: red;"></span>
 		</div>
 		<div>
 			<span>Gender</span> 
-<!-- 			<input type="radio" id="female" name="gender" value="female">  -->
-			<input type="radio" id="female" name="gender"> 
+			<input type="radio" id="female" name="gender" value="female"> 
 			<label for="female">Female</label> 
-			<input type="radio" id="male" name="gender">
+			<input type="radio" id="male" name="gender" value="male">
 			<label for="male">Male</label>
-			
-			<label for="age">Age</lable>
-			<input type="text" id="age" name="age" style="width:30px">
 		</div>
-		
+		<div>	
+			<label for="age">Age</label>
+			<input type="text" id="age" name="age" style="width:30px" onChange="validateAge();">
+			<span id="ageError" style="color: red;"></span>
+		</div>
 		<div>
 			<label for="phone">Phone</label>
 			<input type="text" id="phone" name="phone">
+		</div>
+		<div>
 			<label for="email">Email</label>
 			<input type="text" id="email" name="email">
-		</div>
-			
+		</div>	
 		<div>
 		    <span>Address</span><br>
 		    <label for="street">Street</label>
 		    <input type="text" id="street" name="street" style="width:300px">
 		    <label for="city">City</label>
-		    <input type="text" id="city" name="city" style="width:300px"><br>
-		    
-<!-- 		    <label for="state">State</label>  -->
-<!-- 		    <select id="state" name="state"> -->
-		    		    
+		    <input type="text" id="city" name="city" style="width:200px"><br>	    		    
 		    <span>State</span> 
 		    <select>
-<!-- 		        <option value="oklahoma">Oklahoma</option> -->
-		    	<option>Oklahoma</option>
-		    	<option>Texas</option>
-		    	<option>Colorado</option>
-		    	<option>Ohio</option>
-		    	<option>New York</option>
+		    	<option value="Oklahoma">Oklahoma</option>
+		    	<option value="Texas">Texas</option>
+		    	<option value="Colorado">Colorado</option>
+		    	<option value="Ohio">Ohio</option>
+		    	<option value="NewYork">New York</option>
 		    </select>
-		    
 		    <label for="zip">ZIP</label>
 			<input type="text" id="zip" name="zip" style="width:145px">
-	     </div>
-	     
+	     </div>	     
 	     <div>
 	     	<span>Hobby</span><br>
-<!-- 	     	<input type="checkbox" id="hobby1" name="hobby1"> -->
 	     	<input type="checkbox" id="hobby1" name="hobby1" value="Swimming">
 	     	<label for="hobby1">Swimming</label><br>
 	     	<input type="checkbox" id="hobby2" name="hobby2" value="Running">
@@ -78,22 +74,10 @@
 	     	<label for="hobby5">Yoga</label><br>
 	        <input type="checkbox" id="hobby5" name="hobby5" value="Playning an instrument">
 	     	<label for="hobby5">Playing an instrument</label><br>
+	     </div>
+	     	<button type="submit">Submit</button>  
+	   </form>
 	     	
-	     	<input type="submit" value="Submit">
-	     	
-	     	<input type="button" name="test" value="OK">
-	     	
-	     	
-	 
-	     		
-	     		
-	     		
-	     	</select>
-	     	
-	     	
-	     	
-
-		
-		
+		<script src="inputValidation.js"></script>	
 </body>
 </html>

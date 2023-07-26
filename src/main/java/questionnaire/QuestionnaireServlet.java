@@ -3,6 +3,7 @@ package questionnaire;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,9 +23,17 @@ public class QuestionnaireServlet extends HttpServlet {
 		//String firstName = request.getParameter("firstName" + "lastName");
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
-		String name = firstName + " " + lastName;
-		PrintWriter out = response.getWriter();
-		out.println(name + ", thank you for submmission!");
+		String name = firstName + "  " + lastName;
+		
+	     // Set the attribute in the request
+		request.setAttribute("customerName", name);
+		
+		String message = String.format("Dear %s, thanks for submission!", name);
+		request.setAttribute("confirmMessage", message);
+        // Forward the request to the JSP page
+		RequestDispatcher rd = request.getRequestDispatcher("output.jsp");
+		rd.forward(request, response);
+		
 		
 	}
 
